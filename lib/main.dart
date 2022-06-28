@@ -1,5 +1,6 @@
 import 'package:elastic_bean_stalk/Utils/Routes/routes.dart';
 import 'package:elastic_bean_stalk/Utils/Theme/theme.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
+      debugShowCheckedModeBanner: false,
+      initialRoute: RouteManager.signup,
       theme: (CustomTheme.isDark) ? CustomTheme.darkTheme() : CustomTheme.lightTheme(),
-      initialRoute: RouteManager.login,
       onGenerateRoute: RouteManager.generateRoute,
     );
   }
