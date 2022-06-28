@@ -1,5 +1,5 @@
-import 'package:elastic_bean_stalk/Utils/Routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:elastic_bean_stalk/Utils/Routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: RouteManager.home,
+      debugShowCheckedModeBanner: false,
+      initialRoute: RouteManager.signup,
       onGenerateRoute: RouteManager.generateRoute,
     );
   }
